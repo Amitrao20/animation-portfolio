@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 # animation-portfolio
 =======
-# 3D Portfolio Website
+# animation Portfolio Website
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
+This repository contains the source code for a personal animation portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
 
 
 ![Portfolio Preview](public/images/preview1.png)
@@ -24,7 +24,7 @@ This repository contains the source code for a personal 3D portfolio built with 
 ## Features
 
 - Responsive one-page portfolio layout with reusable section components.
-- 3D character scene rendering powered by React Three Fiber and Three.js.
+- animation character scene rendering powered by React Three Fiber and Three.js.
 - GSAP-powered animations and transitions for interactive storytelling.
 - Custom cursor, hover interactions, and scroll-driven visual effects.
 - Organized component architecture with dedicated utilities and style modules.
@@ -37,7 +37,7 @@ This repository contains the source code for a personal 3D portfolio built with 
 - TypeScript
 - Vite
 
-### Animation and 3D
+### Animation and animation
 
 - GSAP + `@gsap/react`
 - Three.js
@@ -61,7 +61,7 @@ This repository contains the source code for a personal 3D portfolio built with 
 ├── src/
 │   ├── assets/                # Local media/assets
 │   ├── components/
-│   │   ├── Character/         # 3D scene + character logic/utilities
+│   │   ├── Character/         # animation scene + character logic/utilities
 │   │   ├── styles/            # Section/component CSS files
 │   │   ├── About.tsx
 │   │   ├── Career.tsx
@@ -93,7 +93,7 @@ This repository contains the source code for a personal 3D portfolio built with 
 
    ```bash
    git clone <your-repository-url>
-   cd 3d-portfolio
+   cd animation-portfolio
    ```
 
 2. Install dependencies:
@@ -140,7 +140,7 @@ You can adapt this portfolio to your own profile by updating the following areas
 - **Content sections**: Edit files in `src/components/` such as `About.tsx`, `Career.tsx`, `WhatIDo.tsx`, and `Work.tsx`.
 - **Data source**: Update static values in files under `src/data/`.
 - **Styling**: Modify component styles in `src/components/styles/` and global styles in `src/index.css` / `src/App.css`.
-- **3D scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
+- **animation scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
 - **Animations**: Tweak GSAP utilities under `src/components/utils/`.
 
 ## Troubleshooting
@@ -148,7 +148,7 @@ You can adapt this portfolio to your own profile by updating the following areas
 - **Blank screen in development**  
   Check browser console for module import errors and verify all dependencies are installed.
 
-- **3D performance issues on low-end devices**  
+- **animation performance issues on low-end devices**  
   Reduce scene complexity and post-processing effects in the character/scene utilities.
 
 - **GSAP plugin errors**  
