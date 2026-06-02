@@ -35,7 +35,7 @@ const Career = () => {
             </div>
             <p>
               Senior Lead Software Engineer (Feb 2024 – May 2024). Lead Software
-              Engineer (may 2022 – jan 2025).  functional and linguistic testing
+              Engineer (may 2020 – jan 2025).  functional and linguistic testing
               strategy; in-house tooling; collaboration with product and engineering
               for high-quality localized releases.
               Developed ERP and CRM platforms using Laravel and Node.js.
@@ -48,28 +48,7 @@ const Career = () => {
 
             </p>
           </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Chohan Infotech</h4>
-                <h5>Chohan Team </h5>
-              </div>
-              <h3>2020–22</h3>
-            </div>
-            <p>
-              Sep 2020 – Nov 2022. Developed and maintained WCF services consumed
-              by the UI; deployment support across environments; NUnit tests and
-              coverage; bug fixes from QA and users; database work.
-              Developed ERP and CRM platforms using Laravel and Node.js.
-              Built scalable APIs and feature-rich admin dashboards.
-              Integrated third-party services including Stripe, Razorpay, Firebase, and Zoom APIs.
-              Optimized database queries improving response time by ~25%.
-              Mentored junior developers and conducted code reviews ensuring quality delivery.
-              Integrated third-party APIs (Stripe, Zoom, Firebase) to enhance platform functionality,
-              security, and user experience.
-
-            </p>
-          </div>
+        
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
