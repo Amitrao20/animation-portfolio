@@ -39,6 +39,24 @@ const projects = [
     image: "/images/brickbold.png",
     link: "https://www.brickbold.com/",
   },
+
+  {
+    title: "Carpool Software",
+    category: "Carpool Platform",
+    tools:
+      "User Registration, Ride Creation, Ride Matching, Real-time GPS ",
+    image: "/images/carpool.png",
+    link: "https://cadride.ca/",
+  },
+
+  {
+    title: "Distributor & Retailer Software",
+    category: "Distributor Software",
+    tools:
+      "Product & Stock Management, Order Processing, Invoice Generation",
+    image: "/images/texindia.png",
+    link: "https://taxinfinance.online/",
+  },
 ];
 
 const Work = () => {
