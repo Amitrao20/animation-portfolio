@@ -14,88 +14,56 @@ const projects = [
   {
     title: "Mavriq Whatsapp Automation",
     category: "WABA Application",
-    tools:
-      "WhatsApp Business API, Workflow Automation, Notifications",
+    tools: "WhatsApp Business API, Workflow Automation, Notifications",
     image: "/images/tongue-tingu.png",
     link: "https://mavriq.co.in/",
   },
   {
     title: "Mavriq Whatsapp Automation",
     category: "WABA Application",
-    tools:
-      "WhatsApp Business API, Workflow Automation, Notifications",
+    tools: "WhatsApp Business API, Workflow Automation, Notifications",
     image: "/images/mavriq.png",
     link: "https://mavriq.co.in/",
   },
   {
     title: "kittrow.com",
-    category: "Fiat-to-Crypto Exchange Platform",
-    tools:
-      "Buy crypto with your local currency or convert it back.",
+    category: "fiat-to-crypto exchange Platform ",
+    tools: "buy crypto with your local currency or convert it back.",
     image: "/images/kittrow.png",
     link: "https://kittrow.com/",
   },
   {
     title: "brickbold.com",
     category: "Real Estate Platform for FnB Industry",
-    tools:
-      "Property Discovery, Lead Management, Marketplace Workflows",
+    tools: "Property Discovery, Lead Management, Marketplace Workflows",
     image: "/images/brickbold.png",
     link: "https://www.brickbold.com/",
-  },
-  {
-    title: "Carpool Software",
-    category: "Carpool Platform",
-    tools:
-      "User Registration, Ride Creation, Ride Matching, Real-time GPS Tracking, Route Optimization, Seat Booking, In-app Notifications, Driver & Passenger Management",
-    image: "/images/carpool.png",
-    link: "https://cadride.ca/",
-  },
-  {
-    title: "Distributor & Retailer Software",
-    category: "Distributor Software",
-    tools:
-      "Product & Stock Management, Order Processing, Invoice Generation, Payment Tracking, Commission Management",
-    image: "/images/texindia.png",
-    link: "https://taxinfinance.online/",
   },
 ];
 
 const Work = () => {
-  const [currentIndex, setCurrentIndex] =
-    useState<number>(0);
-  const [isAnimating, setIsAnimating] =
-    useState<boolean>(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const goToSlide = useCallback(
     (index: number) => {
       if (isAnimating) return;
-
       setIsAnimating(true);
       setCurrentIndex(index);
-
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 500);
+      setTimeout(() => setIsAnimating(false), 500);
     },
     [isAnimating]
   );
 
   const goToPrev = useCallback(() => {
     const newIndex =
-      currentIndex === 0
-        ? projects.length - 1
-        : currentIndex - 1;
-
+      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
     const newIndex =
-      currentIndex === projects.length - 1
-        ? 0
-        : currentIndex + 1;
-
+      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
@@ -103,10 +71,11 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Work</span>
+          111My <span>Work</span>
         </h2>
 
         <div className="carousel-wrapper">
+          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -115,7 +84,6 @@ const Work = () => {
           >
             <MdArrowBack />
           </button>
-
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={goToNext}
@@ -125,47 +93,32 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
+          {/* Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
               style={{
-                transform: `translateX(-${
-                  currentIndex * 100
-                }%)`,
+                transform: `translateX(-${currentIndex * 100}%)`,
               }}
             >
               {projects.map((project, index) => (
-                <div
-                  className="carousel-slide"
-                  key={index}
-                >
+                <div className="carousel-slide" key={index}>
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
-                        <h3>
-                          {index + 1 < 10
-                            ? `0${index + 1}`
-                            : index + 1}
-                        </h3>
+                        <h3>0{index + 1}</h3>
                       </div>
-
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
-
                         <p className="carousel-category">
                           {project.category}
                         </p>
-
                         <div className="carousel-tools">
-                          <span className="tools-label">
-                            Tools & Features
-                          </span>
-
+                          <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>
                     </div>
-
                     <div className="carousel-image-wrapper">
                       <WorkImage
                         image={project.image}
@@ -179,19 +132,15 @@ const Work = () => {
             </div>
           </div>
 
+          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${
-                  index === currentIndex
-                    ? "carousel-dot-active"
-                    : ""
-                }`}
+                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
+                  }`}
                 onClick={() => goToSlide(index)}
-                aria-label={`Go to project ${
-                  index + 1
-                }`}
+                aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"
               />
             ))}
