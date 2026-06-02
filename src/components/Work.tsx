@@ -31,7 +31,7 @@ const projects = [
     title: "kittrow.com",
     category: "Fiat-to-Crypto Exchange Platform",
     tools:
-      "Buy crypto with your local currency or convert it back",
+      "Buy crypto with your local currency or convert it back.",
     image: "/images/kittrow.png",
     link: "https://kittrow.com/",
   },
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     title: "Distributor & Retailer Software",
-    category: "Distributor & Retailer Management Platform",
+    category: "Distributor Software",
     tools:
       "Product & Stock Management, Order Processing, Invoice Generation, Payment Tracking, Commission Management",
     image: "/images/texindia.png",
@@ -62,11 +62,13 @@ const projects = [
 ];
 
 const Work = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] =
+    useState<number>(0);
+  const [isAnimating, setIsAnimating] =
+    useState<boolean>(false);
 
   const goToSlide = useCallback(
-    (index) => {
+    (index: number) => {
       if (isAnimating) return;
 
       setIsAnimating(true);
@@ -105,7 +107,6 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Left Arrow */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -115,7 +116,6 @@ const Work = () => {
             <MdArrowBack />
           </button>
 
-          {/* Right Arrow */}
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={goToNext}
@@ -125,7 +125,6 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Carousel Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
@@ -136,9 +135,11 @@ const Work = () => {
               }}
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div
+                  className="carousel-slide"
+                  key={index}
+                >
                   <div className="carousel-content">
-                    {/* Left Content */}
                     <div className="carousel-info">
                       <div className="carousel-number">
                         <h3>
@@ -165,7 +166,6 @@ const Work = () => {
                       </div>
                     </div>
 
-                    {/* Right Image */}
                     <div className="carousel-image-wrapper">
                       <WorkImage
                         image={project.image}
@@ -179,7 +179,6 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dots */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
