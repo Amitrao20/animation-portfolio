@@ -31,7 +31,7 @@ const Career = () => {
                 <h4>Sofineer</h4>
                 <h5>3+ years · Mohali</h5>
               </div>
-              <h3>2022–25</h3>
+              <h3>2020–25</h3>
             </div>
             <p>
               Senior Lead Software Engineer (Feb 2024 – May 2024). Lead Software
